@@ -1,0 +1,1085 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Testing" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>2556,6944</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Testing_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Notes Component" sap:VirtualizedContainerService.HintSize="2566.4,6879.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" Name="Application_exePath" />
+      <Variable x:TypeArguments="x:Int32" Name="cnt" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch -  Notes" sap:VirtualizedContainerService.HintSize="2504,6767.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="Notes" sap:VirtualizedContainerService.HintSize="2467.2,6512.8" sap2010:WorkflowViewState.IdRef="Sequence_45">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="2404.8,6400.8" sap2010:WorkflowViewState.IdRef="RetryScope_4">
+            <ui:RetryScope.ActivityBody>
+              <ActivityAction>
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="2363.2,6224.8" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="StrGetNote" />
+                    <Variable x:TypeArguments="x:String" Name="StrResponse" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SPBinder Notes Component" sap:VirtualizedContainerService.HintSize="2300.8,6112.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V2">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence sap:VirtualizedContainerService.HintSize="2267.2,5821.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="Total_Note" />
+                            <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ui_Children" />
+                            <Variable x:TypeArguments="x:String" Name="SortByOrder" />
+                            <Variable x:TypeArguments="sd1:Rectangle" Name="Rec_NotesPanel" />
+                            <Variable x:TypeArguments="x:String" Name="NoteNumber" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="2204.8,918.4" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <TryCatch.Try>
+                              <ui:RetryScope DisplayName="Retry Reset View" sap:VirtualizedContainerService.HintSize="761.6,687.2" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="2">
+                                <ui:RetryScope.ActivityBody>
+                                  <ActivityAction>
+                                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Reset View" sap:VirtualizedContainerService.HintSize="333.6,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][d(alt)]v[u(alt)][u(hk)][d(hk)]r[u(hk)]" Timeout="60" Version="V3" />
+                                  </ActivityAction>
+                                </ui:RetryScope.ActivityBody>
+                                <ui:RetryScope.Condition>
+                                  <ActivityFunc x:TypeArguments="x:Boolean">
+                                    <uix:NCheckState DisplayName="Check App State - View" sap:VirtualizedContainerService.HintSize="720,372.8" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                      <uix:NCheckState.IfExists>
+                                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Reset View" sap:VirtualizedContainerService.HintSize="333.6,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" Shortcuts="[d(hk)][d(alt)]v[u(alt)][u(hk)][d(hk)]r[u(hk)]" Timeout="60" Version="V3" />
+                                      </uix:NCheckState.IfExists>
+                                      <uix:NCheckState.IfNotExists>
+                                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Reset View" sap:VirtualizedContainerService.HintSize="333.6,154.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" Shortcuts="[d(hk)][d(alt)]v[u(alt)][u(hk)][d(hk)]r[u(hk)]" Timeout="60" Version="V3" />
+                                      </uix:NCheckState.IfNotExists>
+                                      <uix:NCheckState.Target>
+                                        <uix:TargetAnchorable CvTextArea="141, 41, 38, 15" CvTextArgument="View" CvType="Text" DesignTimeRectangle="144, 39, 34, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='ViewMenuItem' /&gt;&lt;ctrl name='_View' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ViewMenuItem' /&gt;&lt;ctrl name='_View' role='text' automationid='' check:text='_View' /&gt;" Guid="e9fcc40c-165c-430c-baa3-1d37232b30a6" InformativeScreenshot="601fb5ea76094082cd4786b8f4b452cf.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete" />
+                                      </uix:NCheckState.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NCheckState>
+                                  </ActivityFunc>
+                                </ui:RetryScope.Condition>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:RetryScope>
+                            </TryCatch.Try>
+                            <TryCatch.Catches>
+                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="764.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ActivityAction x:TypeArguments="s:Exception">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                  </ActivityAction.Argument>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Failed to reset the view&quot;]" />
+                                </ActivityAction>
+                              </Catch>
+                            </TryCatch.Catches>
+                          </TryCatch>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="3" DelayBefore="3" DisplayName="Query Page No (Demo Doc)" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="2204.8,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Text="Prior Year Workpapers" Version="V3">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable CvElementArea="25, 171, 354, 27" CvType="InputBox" DesignTimeRectangle="25, 174, 328, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl automationid='TextBoxSearch' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl automationid='TextBoxSearch' role='editable text' /&gt;" Guid="0dc4c0ed-63b4-4b6b-b905-a665c0f3cd0b" InformativeScreenshot="a81258e53a44760071efc0c3a7b97887.png" ScopeSelectorArgument="&lt;wnd aaname='*' app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                          <uix:NCheckState DisplayName="Check App State 'Prior Year Workpapers'" sap:VirtualizedContainerService.HintSize="2204.8,4489.6" sap2010:WorkflowViewState.IdRef="NCheckState_9" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Timeout="20" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1702.4,4271.2" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1640,144" sap2010:WorkflowViewState.IdRef="LogMessage_63" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Prior Year Workpapeprs Folder is present in CY Binder &quot;]" />
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="3" DelayBefore="3" DisplayName="Query Page No (Demo Doc)" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1640,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Text="Exxon Mobil Corporation (S)  | Pg." Version="V3">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable CvElementArea="25, 171, 354, 27" CvType="InputBox" DesignTimeRectangle="25, 174, 328, 20" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl automationid='TextBoxSearch' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl automationid='TextBoxSearch' role='editable text' /&gt;" Guid="0dc4c0ed-63b4-4b6b-b905-a665c0f3cd0b" InformativeScreenshot="a81258e53a44760071efc0c3a7b97887.png" ScopeSelectorArgument="&lt;wnd aaname='*' app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                  </uix:NTypeInto.Target>
+                                </uix:NTypeInto>
+                                <uix:NCheckState DisplayName="Check App State 'Exxon Mobil'" sap:VirtualizedContainerService.HintSize="1640,3713.6" sap2010:WorkflowViewState.IdRef="NCheckState_12" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                  <uix:NCheckState.IfExists>
+                                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1137.6,3495.2" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NDragAndDrop CursorMotionType="Smooth" DelayBetweenActions="0.3" DestinationScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" DisplayName="Drag and Drop 'Pane Header'" sap:VirtualizedContainerService.HintSize="1075.2,52.8" sap2010:WorkflowViewState.IdRef="NDragAndDrop_1" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                        <uix:NDragAndDrop.DestinationTarget>
+                                          <uix:TargetAnchorable DesignTimeRectangle="14, 29, 1902, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl automationid='M_Menu' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='M_Menu' role='popup menu' check:fulltext='Binder&amp;#xD;&amp;#xA;_Binder&amp;#xD;&amp;#xA;Edit&amp;#xD;&amp;#xA;_Edit&amp;#xD;&amp;#xA;View&amp;#xD;&amp;#xA;_View&amp;#xD;&amp;#xA;Help&amp;#xD;&amp;#xA;_Help' /&gt;" Guid="64122c86-cfc4-4289-aeb8-15a509886486" ImageBase64="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" InformativeScreenshot="155b404a2514d77bba70536b460293bc.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                        </uix:NDragAndDrop.DestinationTarget>
+                                        <uix:NDragAndDrop.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="10, 309, 1900, 19" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='HeaderElement' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='HeaderElement' role='client' check:text='Pane Header' /&gt;" Guid="832daa45-4461-4a6e-b50b-91c9649b1dd3" ImageBase64="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" InformativeScreenshot="68562989b720e9efdfd1718f1670e050.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
+                                            <uix:TargetAnchorable.PointOffset>
+                                              <uix:PointOffset Y="-13" />
+                                            </uix:TargetAnchorable.PointOffset>
+                                          </uix:TargetAnchorable>
+                                        </uix:NDragAndDrop.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NDragAndDrop>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'NOTES'" sap:VirtualizedContainerService.HintSize="1075.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="325, 950, 156, 33" DesignTimeScaleFactor="1.25" ElementType="TabPage" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' role='page tab' check:text='NOTES' /&gt;" Guid="553a9297-dc0f-487e-b930-8c33c7d8c22f" ImageBase64="" InformativeScreenshot="c19f8f3c4d832d2c715caf53ba7d30a7.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                        </uix:NClick.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NClick>
+                                      <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="Mouse Scroll 'Save Add'" sap:VirtualizedContainerService.HintSize="1075.2,157.6" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="15" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                        <uix:NMouseScroll.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="12, 123, 1895, 825" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='NotesTreeViewControl' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='NotesTreeViewControl' role='client' check:fulltext='Save&amp;#xD;&amp;#xA;Add Note&amp;#xD;&amp;#xA;Add Response&amp;#xD;&amp;#xA;Delete&amp;#xD;&amp;#xA;E-mail&amp;#xD;&amp;#xA;Export To Word&amp;#xD;&amp;#xA;Quick Note&amp;#xD;&amp;#xA;Sort By&amp;#xD;&amp;#xA;Close&amp;#xD;&amp;#xA;Select' /&gt;" Guid="ca8c5143-71de-4e02-8bce-2443db3bd28a" ImageBase64="" InformativeScreenshot="d2c28aeb8acf6aff1c299cc07dbbc5f3.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                        </uix:NMouseScroll.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NMouseScroll>
+                                      <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute 'Sort By'" sap:VirtualizedContainerService.HintSize="1075.2,208" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Result="[SortByOrder]" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                        <uix:NGetAttributeGeneric.Target>
+                                          <uix:TargetAnchorable CVScreenId="86ce7bbd-c1de-4cfd-af2e-a412fc1e960c" CvTextArea="881, 568, 108, 15" CvTextArgument="Created On Asc" CvType="Text" DesignTimeRectangle="879, 565, 150, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Created On Asc'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='cmbSortBy' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='cmbSortBy' role='combo box' /&gt;" Guid="8343c98c-0909-4294-8318-4e6ca999d07d" InformativeScreenshot="5a1f0d87980284be85f31af3e56b11f4.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CVScreenId="86ce7bbd-c1de-4cfd-af2e-a412fc1e960c" CvTextArea="815, 572, 53, 17" CvTextArgument="Sort By" CvType="Text" DesignTimeRectangle="816, 570, 63, 19" ElementType="Text" FriendlyName="'Sort By'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Sort By' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Sort By' role='text' automationid='' check:text='Sort By' /&gt;" SearchSteps="Selector" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NGetAttributeGeneric.Target>
+                                      </uix:NGetAttributeGeneric>
+                                      <ui:LogMessage DisplayName="Log Message (Sort By Desc )" sap:VirtualizedContainerService.HintSize="1075.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The notes are sort by Descending&quot;]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:LogMessage>
+                                      <If Condition="[Not SortByOrder=&quot;Created On Desc&quot;]" DisplayName="If - Notes are Sort By Desc" sap:VirtualizedContainerService.HintSize="1075.2,52.8" sap2010:WorkflowViewState.IdRef="If_1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If.Then>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376.8,444.8" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sort By'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable CVScreenId="5c83a1d9-dc3c-493b-ac9a-169c3d83baf7" CvTextArea="881, 568, 108, 15" CvTextArgument="Created On Asc" CvType="Text" DesignTimeRectangle="879, 565, 150, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Created On Asc'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='cmbSortBy' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='cmbSortBy' role='combo box' /&gt;" Guid="31c1f9ad-fb00-4263-bedf-7d5ff856a7eb" InformativeScreenshot="3ca21e437a4ad575973bc81ca3dc4f4a.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - *' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="5c83a1d9-dc3c-493b-ac9a-169c3d83baf7" CvTextArea="815, 572, 53, 17" CvTextArgument="Sort By" CvType="Text" DesignTimeRectangle="816, 570, 63, 19" ElementType="Text" FriendlyName="'Sort By'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Sort By' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Sort By' role='text' automationid='' check:text='Sort By' /&gt;" SearchSteps="Selector" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NClick.Target>
+                                            </uix:NClick>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="List Item" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable CVScreenId="5c83a1d9-dc3c-493b-ac9a-169c3d83baf7" CvTextArea="881, 568, 108, 15" CvTextArgument="Created On Asc" CvType="Text" DesignTimeRectangle="879, 565, 150, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Created On Asc'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Created On Desc' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='cmbSortBy' role='combo box' /&gt;" Guid="31c1f9ad-fb00-4263-bedf-7d5ff856a7eb" InformativeScreenshot="3ca21e437a4ad575973bc81ca3dc4f4a.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="5c83a1d9-dc3c-493b-ac9a-169c3d83baf7" CvTextArea="815, 572, 53, 17" CvTextArgument="Sort By" CvType="Text" DesignTimeRectangle="816, 570, 63, 19" ElementType="Text" FriendlyName="'Sort By'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Sort By' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Sort By' role='text' automationid='' check:text='Sort By' /&gt;" SearchSteps="Selector" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NClick.Target>
+                                            </uix:NClick>
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_99">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                      <uix:NCheckState DisplayName="Check App State - Note Availabality" sap:VirtualizedContainerService.HintSize="1075.2,2367.2" sap2010:WorkflowViewState.IdRef="NCheckState_11" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                        <uix:NCheckState.IfExists>
+                                          <Sequence DisplayName="Target appears - If Notes available" sap:VirtualizedContainerService.HintSize="572.8,2108.8" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:String" Name="strGetCount" />
+                                              <Variable x:TypeArguments="x:Int32" Name="GetCount" />
+                                              <Variable x:TypeArguments="x:Int32" Name="Int_Count" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The RollForwarded notes are present in CY Binder&quot;]" />
+                                            <uix:NGetText DisplayName="Get Note Count" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" TextString="[strGetCount]" Version="V3">
+                                              <uix:NGetText.Target>
+                                                <uix:TargetAnchorable CVScreenId="5fd4294c-9da2-4068-9552-5e76cd99e69b" CvElementArea="56, 782, 39, 37" CvTextArea="67, 790, 16, 18" CvTextArgument="4" CvType="Button" DesignTimeRectangle="70, 789, 12, 24" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='lblNoteIndexNumber' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='lblNoteIndexNumber' role='text' /&gt;" Guid="ebd0df1e-5cf4-46f3-ace1-208ef5f599ea" ImageBase64="" InformativeScreenshot="8c26ae7d5f69b794ff27039f658d1c92.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                              </uix:NGetText.Target>
+                                            </uix:NGetText>
+                                            <Assign sap:VirtualizedContainerService.HintSize="510.4,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Int32">[GetCount]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Int32">[CInt(strGetCount)]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <Assign DisplayName="Convert in integer" sap:VirtualizedContainerService.HintSize="510.4,82.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:Int32">[Int_Count]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:Int32">[CInt(strGetCount)]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sort By'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable CVScreenId="5c83a1d9-dc3c-493b-ac9a-169c3d83baf7" CvTextArea="881, 568, 108, 15" CvTextArgument="Created On Asc" CvType="Text" DesignTimeRectangle="879, 565, 150, 28" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Created On Asc'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='cmbSortBy' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='cmbSortBy' role='combo box' /&gt;" Guid="31c1f9ad-fb00-4263-bedf-7d5ff856a7eb" InformativeScreenshot="3ca21e437a4ad575973bc81ca3dc4f4a.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - *' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target CVScreenId="5c83a1d9-dc3c-493b-ac9a-169c3d83baf7" CvTextArea="815, 572, 53, 17" CvTextArgument="Sort By" CvType="Text" DesignTimeRectangle="816, 570, 63, 19" ElementType="Text" FriendlyName="'Sort By'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Sort By' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Sort By' role='text' automationid='' check:text='Sort By' /&gt;" SearchSteps="Selector" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NClick.Target>
+                                            </uix:NClick>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Created On Asc'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable CVScreenId="d703b84d-980f-4eb1-8932-faa980eea350" CvTextArea="5, 65, 108, 13" CvTextArgument="Created On Asc" CvType="Text" DesignTimeRectangle="5, 65, 108, 13" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Created On Asc' role='list item' /&gt;&lt;ctrl name='Created On Asc' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='Created On Asc' role='list item' /&gt;&lt;ctrl name='Created On Asc' role='text' automationid='' check:text='Created On Asc' /&gt;" Guid="964a1774-c91c-431d-b7e4-c28f72a2bdf6" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                              </uix:NClick.Target>
+                                            </uix:NClick>
+                                            <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll 'SPbinderLibrary.Note 1'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                              <uix:NMouseScroll.Target>
+                                                <uix:TargetAnchorable DesignTimeRectangle="13, 458, 1894, 481" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='NodesTreeView' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='NodesTreeView' role='outline' check:fulltext='SPbinderLibrary.Note&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;Subject: &amp;#xD;&amp;#xA;Test Subject 1&amp;#xD;&amp;#xA;Type: &amp;#xD;&amp;#xA;Prior Year Amount: &amp;#xD;&amp;#xA;Select Note&amp;#xD;&amp;#xA;Roll' /&gt;" Guid="f362754f-9637-4915-87c5-aefb0c84f182" InformativeScreenshot="6bac660f27d080ad22eca1ddafbf67f3.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                              </uix:NMouseScroll.Target>
+                                            </uix:NMouseScroll>
+                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="510.4,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[Int_Count]" />
+                                            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="510.4,648.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                                              <ui:InterruptibleWhile.Body>
+                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476.8,512" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="x:String" Name="GetClearNoteStatus" />
+                                                  </Sequence.Variables>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute 'Automation BOT'" sap:VirtualizedContainerService.HintSize="433.6,208" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[GetClearNoteStatus]" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                    <uix:NGetAttributeGeneric.Target>
+                                                      <uix:TargetAnchorable CVScreenId="928c4374-83f0-4aa6-80cf-a55fdda26635" CvTextArea="73, 820, 120, 15" CvTextArgument="Automation BOT" CvType="Text" DesignTimeRectangle="73, 812, 1806, 44" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'Automation BOT'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='ChkBClearNote' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='ChkBClearNote' role='check box' /&gt;" Guid="ec0ac56c-e2f0-4a8c-a983-87f655ec16ec" InformativeScreenshot="c48dbac8ab5b8f30b850104f395413b9.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                                                    </uix:NGetAttributeGeneric.Target>
+                                                  </uix:NGetAttributeGeneric>
+                                                  <If Condition="[GetClearNoteStatus = &quot;checked&quot;]" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="If_2">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <If.Then>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="377.6,1430.4" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                                                        <Sequence.Variables>
+                                                          <Variable x:TypeArguments="x:String" Name="str_GetSubject" />
+                                                          <Variable x:TypeArguments="x:String" Name="str_GetText" />
+                                                          <Variable x:TypeArguments="x:String" Name="str_GetType" />
+                                                        </Sequence.Variables>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NGetText DisplayName="Read Subject " sap:VirtualizedContainerService.HintSize="334.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" TextString="[str_GetSubject]" Version="V3">
+                                                          <uix:NGetText.Target>
+                                                            <uix:TargetAnchorable CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvElementArea="174, 620, 277, 29" CvType="InputBox" DesignTimeRectangle="176, 623, 275, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'text TxtBoxSubject'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TxtBoxSubject' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TxtBoxSubject' role='text' /&gt;" Guid="7ac692a8-bcfe-4f6e-b6c7-4df7f14d4406" ImageBase64="" InformativeScreenshot="6cd4b4263fd2b6f03248f7a901d7f050.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                              <uix:TargetAnchorable.Anchors>
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                  <uix:Target CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvTextArea="96, 627, 57, 18" CvTextArgument="Subject:" CvType="Text" DesignTimeRectangle="98, 626, 60, 19" ElementType="Icon" FriendlyName="'graphic Icon'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TblkSubject' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl automationid='Icon' role='graphic' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                                                                </scg:List>
+                                                              </uix:TargetAnchorable.Anchors>
+                                                            </uix:TargetAnchorable>
+                                                          </uix:NGetText.Target>
+                                                        </uix:NGetText>
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_69" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clear Note: RollForwarded Subject is &quot;+str_GetSubject]" />
+                                                        <uix:NGetText DisplayName="Get Text From Notes" sap:VirtualizedContainerService.HintSize="334.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" TextString="[str_GetText]" Version="V3">
+                                                          <uix:NGetText.Target>
+                                                            <uix:TargetAnchorable CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvElementArea="174, 620, 277, 29" CvType="InputBox" DesignTimeRectangle="176, 623, 275, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'text TxtBoxSubject'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' idx='{0}*' /&gt;&lt;ctrl automationid='RtxtNote' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TxtBoxSubject' role='text' /&gt;" Guid="7ac692a8-bcfe-4f6e-b6c7-4df7f14d4406" ImageBase64="" InformativeScreenshot="6cd4b4263fd2b6f03248f7a901d7f050.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                              <uix:TargetAnchorable.Anchors>
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                  <uix:Target CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvTextArea="96, 627, 57, 18" CvTextArgument="Subject:" CvType="Text" DesignTimeRectangle="98, 626, 60, 19" ElementType="Icon" FriendlyName="'graphic Icon'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TblkSubject' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl automationid='Icon' role='graphic' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                                                                </scg:List>
+                                                              </uix:TargetAnchorable.Anchors>
+                                                            </uix:TargetAnchorable>
+                                                          </uix:NGetText.Target>
+                                                        </uix:NGetText>
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_70" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clear Note: RollForwarded inner text is &quot;+str_GetText]" />
+                                                        <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="helpText" DisplayName="Get Type of Notes" sap:VirtualizedContainerService.HintSize="334.4,208" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" Result="[str_GetType]" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                          <uix:NGetAttributeGeneric.Target>
+                                                            <uix:TargetAnchorable CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvElementArea="174, 777, 278, 28" CvType="InputBox" DesignTimeRectangle="176, 779, 275, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='CmbSubjectType' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TxtBoxSubject' role='editable text' /&gt;" Guid="5072a249-9dcd-49d6-920d-ff493a7090df" ImageBase64="" InformativeScreenshot="681f78226ec217f788ec57f839391e64.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                              <uix:TargetAnchorable.Anchors>
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                  <uix:Target CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvTextArea="96, 783, 57, 17" CvTextArgument="Subject:" CvType="Text" DesignTimeRectangle="98, 782, 60, 19" ElementType="Text" FriendlyName="'Subject'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TblkType' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TblkSubject' role='text' check:text='Subject:' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                                                                </scg:List>
+                                                              </uix:TargetAnchorable.Anchors>
+                                                            </uix:TargetAnchorable>
+                                                          </uix:NGetAttributeGeneric.Target>
+                                                        </uix:NGetAttributeGeneric>
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_71" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clear Note: Roll Forwarded notes is &quot;+str_GetType]" />
+                                                        <uix:NCheckState DisplayName="Check App State 'Label'" sap:VirtualizedContainerService.HintSize="334.4,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_13" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Timeout="8" Version="V3">
+                                                          <uix:NCheckState.IfExists>
+                                                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,1064" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                                                              <Sequence.Variables>
+                                                                <Variable x:TypeArguments="x:String" Name="GetOCR_Output" />
+                                                              </Sequence.Variables>
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click on Note link" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                <uix:NClick.Target>
+                                                                  <uix:TargetAnchorable CVScreenId="d7a97286-16e1-4d35-84d0-8490d5f1dd20" CvElementArea="519, 848, 27, 28" CvType="Button" DesignTimeRectangle="530, 855, 7, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='1' role='radio button' /&gt;&lt;ctrl name='1' role='text' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='1' role='radio button' /&gt;&lt;ctrl name='1' role='text' automationid='' check:text='1' /&gt;" Guid="d1014053-ad24-49ed-a37e-a64cbb06574a" InformativeScreenshot="8fa567567fd704572f930058bb1ddd1f.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                                                </uix:NClick.Target>
+                                                              </uix:NClick>
+                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="1" DisplayName="Click Doc Viewer Pane" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                <uix:NClick.Target>
+                                                                  <uix:TargetAnchorable DesignTimeRectangle="538, 195, 1162, 740" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="858da052-7b1c-41d6-a343-a34aced0b9e7" InformativeScreenshot="ca91b40f9d678277e6a998226fa17788.png" ScopeSelectorArgument="&lt;wnd aaname='*' app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                                                                </uix:NClick.Target>
+                                                              </uix:NClick>
+                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Reset Actual Size" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                <uix:NClick.Target>
+                                                                  <uix:TargetAnchorable CvTextArea="43, 131, 79, 15" CvTextArgument="Actual Size" CvType="Text" DesignTimeRectangle="5, 124, 197, 30" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='Actual Size' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Actual Size' role='menu item' automationid='' check:text='Actual Size' /&gt;" Guid="994d69e5-f7b1-43aa-a87f-317db20c730a" InformativeScreenshot="c42ad867a755e1aa1f3128d8e540800d.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                                </uix:NClick.Target>
+                                                              </uix:NClick>
+                                                              <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'client  NoteUserControl'" sap:VirtualizedContainerService.HintSize="387.2,172" sap2010:WorkflowViewState.IdRef="GetOCRText_1">
+                                                                <ui:GetOCRText.OCREngine>
+                                                                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                                                    <ActivityFunc.Argument>
+                                                                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                                                    </ActivityFunc.Argument>
+                                                                    <p:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="p7W0AfQyFCzfFK6qFBd6zihGBZrFURCJdGPBdEKdj0IqK7aIcpGJSbcHC705/qTUQuxCDFkdgCf3EJ1jgTZP0Q==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Image="[Image]" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="100000" />
+                                                                  </ActivityFunc>
+                                                                </ui:GetOCRText.OCREngine>
+                                                                <ui:GetOCRText.Target>
+                                                                  <ui:Target Element="{x:Null}" Id="b30aee1a-dcbd-40c8-989b-47c9a1072101" InformativeScreenshot="c9b5a21d438d057d8fa78b4e48f74ea9" Selector="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='4' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='NoteUserControl' /&gt;">
+                                                                    <ui:Target.ClippingRegion>
+                                                                      <ui:Region Rectangle="528, 5, 213, 55" />
+                                                                    </ui:Target.ClippingRegion>
+                                                                    <ui:Target.TimeoutMS>
+                                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                                    </ui:Target.TimeoutMS>
+                                                                    <ui:Target.WaitForReady>
+                                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                    </ui:Target.WaitForReady>
+                                                                  </ui:Target>
+                                                                </ui:GetOCRText.Target>
+                                                                <ui:GetOCRText.Text>
+                                                                  <OutArgument x:TypeArguments="x:String">[GetOCR_Output]</OutArgument>
+                                                                </ui:GetOCRText.Text>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </ui:GetOCRText>
+                                                              <ui:LogMessage DisplayName="Log Message For Link note Page" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clear Note: Linked with Exxon Mobil Corporation (S)&quot;]" />
+                                                            </Sequence>
+                                                          </uix:NCheckState.IfExists>
+                                                          <uix:NCheckState.IfNotExists>
+                                                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                            </Sequence>
+                                                          </uix:NCheckState.IfNotExists>
+                                                          <uix:NCheckState.Target>
+                                                            <uix:TargetAnchorable DesignTimeRectangle="530, 876, 7, 19" DesignTimeScaleFactor="1.25" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='1' role='radio button' /&gt;&lt;ctrl name='1' role='text' /&gt;&quot;, Int_Count)]" Guid="4cfeec89-f61d-421e-a534-6b7565b355f2" ImageBase64="" InformativeScreenshot="161c06df64414d5062a1c2fa14ea9737.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" />
+                                                          </uix:NCheckState.Target>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </uix:NCheckState>
+                                                        <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="334.4,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_14" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Timeout="10" Version="V3">
+                                                          <uix:NCheckState.IfExists>
+                                                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,1445.6" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                                                              <Sequence.Variables>
+                                                                <Variable x:TypeArguments="x:String" Name="GetResponse" />
+                                                                <Variable x:TypeArguments="x:String" Name="OCR_Output" />
+                                                              </Sequence.Variables>
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <uix:NGetText DisplayName="Get Text 'Subject'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" TextString="[GetResponse]" Version="V3">
+                                                                <uix:NGetText.Target>
+                                                                  <uix:TargetAnchorable CVScreenId="2a10f8b6-0cb0-4d89-92d9-6bffc7946701" CvElementArea="178, 777, 276, 29" CvType="InputBox" DesignTimeRectangle="179, 779, 275, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.Response' role='outline item' /&gt;&lt;ctrl automationid='RtxtResponse' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TxtBoxSubject' role='editable text' /&gt;" Guid="63f20610-583a-4864-a530-9d4df5540410" ImageBase64="" InformativeScreenshot="014f864782208e6b2a65f40ad966e76e.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                                    <uix:TargetAnchorable.Anchors>
+                                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                        <uix:Target CVScreenId="2a10f8b6-0cb0-4d89-92d9-6bffc7946701" CvTextArea="98, 783, 58, 17" CvTextArgument="Subject:" CvType="Text" DesignTimeRectangle="101, 782, 60, 19" ElementType="Text" FriendlyName="'Subject'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.Response' role='outline item' /&gt;&lt;ctrl automationid='lblResponseIndexNumber' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TblkSubject' role='text' check:text='Subject:' /&gt;" SearchSteps="Selector" />
+                                                                      </scg:List>
+                                                                    </uix:TargetAnchorable.Anchors>
+                                                                  </uix:TargetAnchorable>
+                                                                </uix:NGetText.Target>
+                                                              </uix:NGetText>
+                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_75" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clear Note: RollForwarded Response is &quot;+GetResponse]" />
+                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                <uix:NClick.Target>
+                                                                  <uix:TargetAnchorable CVScreenId="afbe5120-f69c-4d0d-9bb0-5edb7b496b49" CvElementArea="523, 836, 26, 26" CvType="Button" DesignTimeRectangle="533, 841, 7, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.Response' role='outline item' /&gt;&lt;ctrl automationid='rrbtn' /&gt;&lt;ctrl name='1' role='text' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.Response' role='outline item' /&gt;&lt;ctrl automationid='rrbtn' /&gt;&lt;ctrl name='1' role='text' automationid='' check:text='1' /&gt;" Guid="263b2d33-d6b7-48ea-bbe8-a2eeae153443" InformativeScreenshot="33ec8accbb65aa4cbcd21e12fcb03ff3.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                                                </uix:NClick.Target>
+                                                              </uix:NClick>
+                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="1" DisplayName="Click Doc Viewer Pane" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                <uix:NClick.Target>
+                                                                  <uix:TargetAnchorable DesignTimeRectangle="538, 195, 1162, 740" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="858da052-7b1c-41d6-a343-a34aced0b9e7" InformativeScreenshot="ca91b40f9d678277e6a998226fa17788.png" ScopeSelectorArgument="&lt;wnd aaname='*' app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                                                                </uix:NClick.Target>
+                                                              </uix:NClick>
+                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Reset Actual Size" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                <uix:NClick.Target>
+                                                                  <uix:TargetAnchorable CvTextArea="43, 131, 79, 15" CvTextArgument="Actual Size" CvType="Text" DesignTimeRectangle="5, 124, 197, 30" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='Actual Size' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Actual Size' role='menu item' automationid='' check:text='Actual Size' /&gt;" Guid="994d69e5-f7b1-43aa-a87f-317db20c730a" InformativeScreenshot="c42ad867a755e1aa1f3128d8e540800d.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                                </uix:NClick.Target>
+                                                              </uix:NClick>
+                                                              <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'client  NoteUserControl'" sap:VirtualizedContainerService.HintSize="387.2,172" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
+                                                                <ui:GetOCRText.OCREngine>
+                                                                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                                                    <ActivityFunc.Argument>
+                                                                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                                                    </ActivityFunc.Argument>
+                                                                    <p:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="p7W0AfQyFCzfFK6qFBd6zihGBZrFURCJdGPBdEKdj0IqK7aIcpGJSbcHC705/qTUQuxCDFkdgCf3EJ1jgTZP0Q==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_2" Image="[Image]" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="100000" />
+                                                                  </ActivityFunc>
+                                                                </ui:GetOCRText.OCREngine>
+                                                                <ui:GetOCRText.Target>
+                                                                  <ui:Target Element="{x:Null}" Id="b30aee1a-dcbd-40c8-989b-47c9a1072101" InformativeScreenshot="c9b5a21d438d057d8fa78b4e48f74ea9" Selector="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='4' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='NoteUserControl' /&gt;">
+                                                                    <ui:Target.ClippingRegion>
+                                                                      <ui:Region Rectangle="528, 5, 213, 55" />
+                                                                    </ui:Target.ClippingRegion>
+                                                                    <ui:Target.TimeoutMS>
+                                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                                    </ui:Target.TimeoutMS>
+                                                                    <ui:Target.WaitForReady>
+                                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                    </ui:Target.WaitForReady>
+                                                                  </ui:Target>
+                                                                </ui:GetOCRText.Target>
+                                                                <ui:GetOCRText.Text>
+                                                                  <OutArgument x:TypeArguments="x:String">[OCR_Output]</OutArgument>
+                                                                </ui:GetOCRText.Text>
+                                                              </ui:GetOCRText>
+                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_76" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clear Note: Response is linked with Exxon Mobil Corporation (S)&quot;]" />
+                                                            </Sequence>
+                                                          </uix:NCheckState.IfExists>
+                                                          <uix:NCheckState.IfNotExists>
+                                                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_74" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Response Not Added for &quot;+str_GetText]" />
+                                                            </Sequence>
+                                                          </uix:NCheckState.IfNotExists>
+                                                          <uix:NCheckState.Target>
+                                                            <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.Response' role='outline item' /&gt;&lt;ctrl role='client' /&gt;&quot;, Int_Count)]" Guid="86b862a8-d59b-4954-8fdf-251a05ce2a3f" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                                                          </uix:NCheckState.Target>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </uix:NCheckState>
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="1057.6,4423.2" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <Sequence sap:VirtualizedContainerService.HintSize="1014.4,4333.6" sap2010:WorkflowViewState.IdRef="Sequence_110">
+                                                          <Sequence.Variables>
+                                                            <Variable x:TypeArguments="x:String" Name="str_GetSubject" />
+                                                            <Variable x:TypeArguments="x:String" Name="str_GetText" />
+                                                            <Variable x:TypeArguments="x:String" Name="str_GetType" />
+                                                          </Sequence.Variables>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <uix:NGetText DisplayName="Read Subject " sap:VirtualizedContainerService.HintSize="952,157.6" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" TextString="[str_GetSubject]" Version="V3">
+                                                            <uix:NGetText.Target>
+                                                              <uix:TargetAnchorable CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvElementArea="174, 620, 277, 29" CvType="InputBox" DesignTimeRectangle="176, 623, 275, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'text TxtBoxSubject'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TxtBoxSubject' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TxtBoxSubject' role='text' /&gt;" Guid="7ac692a8-bcfe-4f6e-b6c7-4df7f14d4406" ImageBase64="" InformativeScreenshot="6cd4b4263fd2b6f03248f7a901d7f050.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                                <uix:TargetAnchorable.Anchors>
+                                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                    <uix:Target CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvTextArea="96, 627, 57, 18" CvTextArgument="Subject:" CvType="Text" DesignTimeRectangle="98, 626, 60, 19" ElementType="Icon" FriendlyName="'graphic Icon'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TblkSubject' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl automationid='Icon' role='graphic' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                                                                  </scg:List>
+                                                                </uix:TargetAnchorable.Anchors>
+                                                              </uix:TargetAnchorable>
+                                                            </uix:NGetText.Target>
+                                                          </uix:NGetText>
+                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="952,144" sap2010:WorkflowViewState.IdRef="LogMessage_77" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;UnClear Note: RollForwarded Subject is &quot;+str_GetSubject]" />
+                                                          <uix:NGetText DisplayName="Get Text From Notes" sap:VirtualizedContainerService.HintSize="952,157.6" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" TextString="[str_GetText]" Version="V3">
+                                                            <uix:NGetText.Target>
+                                                              <uix:TargetAnchorable CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvElementArea="174, 620, 277, 29" CvType="InputBox" DesignTimeRectangle="176, 623, 275, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'text TxtBoxSubject'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' idx='{0}*' /&gt;&lt;ctrl automationid='RtxtNote' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TxtBoxSubject' role='text' /&gt;" Guid="7ac692a8-bcfe-4f6e-b6c7-4df7f14d4406" ImageBase64="" InformativeScreenshot="6cd4b4263fd2b6f03248f7a901d7f050.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                                <uix:TargetAnchorable.Anchors>
+                                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                    <uix:Target CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvTextArea="96, 627, 57, 18" CvTextArgument="Subject:" CvType="Text" DesignTimeRectangle="98, 626, 60, 19" ElementType="Icon" FriendlyName="'graphic Icon'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TblkSubject' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl automationid='Icon' role='graphic' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                                                                  </scg:List>
+                                                                </uix:TargetAnchorable.Anchors>
+                                                              </uix:TargetAnchorable>
+                                                            </uix:NGetText.Target>
+                                                          </uix:NGetText>
+                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="952,144" sap2010:WorkflowViewState.IdRef="LogMessage_78" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;UnClear Note: RollForwarded inner text is &quot;+str_GetText]" />
+                                                          <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="helpText" DisplayName="Get Type of Notes" sap:VirtualizedContainerService.HintSize="952,208" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_4" Result="[str_GetType]" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                            <uix:NGetAttributeGeneric.Target>
+                                                              <uix:TargetAnchorable CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvElementArea="174, 777, 278, 28" CvType="InputBox" DesignTimeRectangle="176, 779, 275, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='CmbSubjectType' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TxtBoxSubject' role='editable text' /&gt;" Guid="5072a249-9dcd-49d6-920d-ff493a7090df" ImageBase64="" InformativeScreenshot="681f78226ec217f788ec57f839391e64.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                                <uix:TargetAnchorable.Anchors>
+                                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                    <uix:Target CVScreenId="5ece2ce4-f0b4-479a-9a20-5550666a606e" CvTextArea="96, 783, 57, 17" CvTextArgument="Subject:" CvType="Text" DesignTimeRectangle="98, 782, 60, 19" ElementType="Text" FriendlyName="'Subject'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TblkType' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TblkSubject' role='text' check:text='Subject:' /&gt;" ImageBase64="" SearchSteps="Selector" />
+                                                                  </scg:List>
+                                                                </uix:TargetAnchorable.Anchors>
+                                                              </uix:TargetAnchorable>
+                                                            </uix:NGetAttributeGeneric.Target>
+                                                          </uix:NGetAttributeGeneric>
+                                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="952,144" sap2010:WorkflowViewState.IdRef="LogMessage_79" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;UnClear Note: Roll Forwarded notes is &quot;+str_GetType]" />
+                                                          <uix:NCheckState DisplayName="Check App State 'Label'" sap:VirtualizedContainerService.HintSize="952,1282.4" sap2010:WorkflowViewState.IdRef="NCheckState_15" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Timeout="8" Version="V3">
+                                                            <uix:NCheckState.IfExists>
+                                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,1064" sap2010:WorkflowViewState.IdRef="Sequence_111">
+                                                                <Sequence.Variables>
+                                                                  <Variable x:TypeArguments="x:String" Name="GetOCR_Output" />
+                                                                </Sequence.Variables>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click on Note link" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                  <uix:NClick.Target>
+                                                                    <uix:TargetAnchorable CVScreenId="d7a97286-16e1-4d35-84d0-8490d5f1dd20" CvElementArea="519, 848, 27, 28" CvType="Button" DesignTimeRectangle="530, 855, 7, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='1' role='radio button' /&gt;&lt;ctrl name='1' role='text' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='1' role='radio button' /&gt;&lt;ctrl name='1' role='text' automationid='' check:text='1' /&gt;" Guid="d1014053-ad24-49ed-a37e-a64cbb06574a" InformativeScreenshot="8fa567567fd704572f930058bb1ddd1f.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                                                  </uix:NClick.Target>
+                                                                </uix:NClick>
+                                                                <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="1" DisplayName="Click Doc Viewer Pane" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                  <uix:NClick.Target>
+                                                                    <uix:TargetAnchorable DesignTimeRectangle="538, 195, 1162, 740" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="858da052-7b1c-41d6-a343-a34aced0b9e7" InformativeScreenshot="ca91b40f9d678277e6a998226fa17788.png" ScopeSelectorArgument="&lt;wnd aaname='*' app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                                                                  </uix:NClick.Target>
+                                                                </uix:NClick>
+                                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Reset Actual Size" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                  <uix:NClick.Target>
+                                                                    <uix:TargetAnchorable CvTextArea="43, 131, 79, 15" CvTextArgument="Actual Size" CvType="Text" DesignTimeRectangle="5, 124, 197, 30" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='Actual Size' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Actual Size' role='menu item' automationid='' check:text='Actual Size' /&gt;" Guid="994d69e5-f7b1-43aa-a87f-317db20c730a" InformativeScreenshot="c42ad867a755e1aa1f3128d8e540800d.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                                  </uix:NClick.Target>
+                                                                </uix:NClick>
+                                                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'client  NoteUserControl'" sap:VirtualizedContainerService.HintSize="387.2,172" sap2010:WorkflowViewState.IdRef="GetOCRText_3">
+                                                                  <ui:GetOCRText.OCREngine>
+                                                                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                                                      <ActivityFunc.Argument>
+                                                                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                                                      </ActivityFunc.Argument>
+                                                                      <p:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="p7W0AfQyFCzfFK6qFBd6zihGBZrFURCJdGPBdEKdj0IqK7aIcpGJSbcHC705/qTUQuxCDFkdgCf3EJ1jgTZP0Q==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_3" Image="[Image]" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="100000" />
+                                                                    </ActivityFunc>
+                                                                  </ui:GetOCRText.OCREngine>
+                                                                  <ui:GetOCRText.Target>
+                                                                    <ui:Target Element="{x:Null}" Id="b30aee1a-dcbd-40c8-989b-47c9a1072101" InformativeScreenshot="c9b5a21d438d057d8fa78b4e48f74ea9" Selector="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='4' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='NoteUserControl' /&gt;">
+                                                                      <ui:Target.ClippingRegion>
+                                                                        <ui:Region Rectangle="528, 5, 213, 55" />
+                                                                      </ui:Target.ClippingRegion>
+                                                                      <ui:Target.TimeoutMS>
+                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                      </ui:Target.TimeoutMS>
+                                                                      <ui:Target.WaitForReady>
+                                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                      </ui:Target.WaitForReady>
+                                                                    </ui:Target>
+                                                                  </ui:GetOCRText.Target>
+                                                                  <ui:GetOCRText.Text>
+                                                                    <OutArgument x:TypeArguments="x:String">[GetOCR_Output]</OutArgument>
+                                                                  </ui:GetOCRText.Text>
+                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                    </scg:Dictionary>
+                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                </ui:GetOCRText>
+                                                                <ui:LogMessage DisplayName="Log Message For Link note Page" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_80" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;UnClear Note: Linked with Exxon Mobil Corporation (S)&quot;]" />
+                                                              </Sequence>
+                                                            </uix:NCheckState.IfExists>
+                                                            <uix:NCheckState.IfNotExists>
+                                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_113">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </Sequence>
+                                                            </uix:NCheckState.IfNotExists>
+                                                            <uix:NCheckState.Target>
+                                                              <uix:TargetAnchorable DesignTimeRectangle="530, 876, 7, 19" DesignTimeScaleFactor="1.25" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='1' role='radio button' /&gt;&lt;ctrl name='1' role='text' /&gt;&quot;, Int_Count)]" Guid="4cfeec89-f61d-421e-a534-6b7565b355f2" ImageBase64="" InformativeScreenshot="161c06df64414d5062a1c2fa14ea9737.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" />
+                                                            </uix:NCheckState.Target>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </uix:NCheckState>
+                                                          <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="952,1704" sap2010:WorkflowViewState.IdRef="NCheckState_16" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Timeout="10" Version="V3">
+                                                            <uix:NCheckState.IfExists>
+                                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,1445.6" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                                                                <Sequence.Variables>
+                                                                  <Variable x:TypeArguments="x:String" Name="GetResponse" />
+                                                                  <Variable x:TypeArguments="x:String" Name="OCR_Output" />
+                                                                </Sequence.Variables>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                <uix:NGetText DisplayName="Get Text 'Subject'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" TextString="[GetResponse]" Version="V3">
+                                                                  <uix:NGetText.Target>
+                                                                    <uix:TargetAnchorable CVScreenId="2a10f8b6-0cb0-4d89-92d9-6bffc7946701" CvElementArea="178, 777, 276, 29" CvType="InputBox" DesignTimeRectangle="179, 779, 275, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.Response' role='outline item' /&gt;&lt;ctrl automationid='RtxtResponse' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TxtBoxSubject' role='editable text' /&gt;" Guid="63f20610-583a-4864-a530-9d4df5540410" ImageBase64="" InformativeScreenshot="014f864782208e6b2a65f40ad966e76e.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                                      <uix:TargetAnchorable.Anchors>
+                                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                          <uix:Target CVScreenId="2a10f8b6-0cb0-4d89-92d9-6bffc7946701" CvTextArea="98, 783, 58, 17" CvTextArgument="Subject:" CvType="Text" DesignTimeRectangle="101, 782, 60, 19" ElementType="Text" FriendlyName="'Subject'" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.Response' role='outline item' /&gt;&lt;ctrl automationid='lblResponseIndexNumber' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='TblkSubject' role='text' check:text='Subject:' /&gt;" SearchSteps="Selector" />
+                                                                        </scg:List>
+                                                                      </uix:TargetAnchorable.Anchors>
+                                                                    </uix:TargetAnchorable>
+                                                                  </uix:NGetText.Target>
+                                                                </uix:NGetText>
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_82" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;UnClear Note: RollForwarded Response is &quot;+GetResponse]" />
+                                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                  <uix:NClick.Target>
+                                                                    <uix:TargetAnchorable CVScreenId="afbe5120-f69c-4d0d-9bb0-5edb7b496b49" CvElementArea="523, 836, 26, 26" CvType="Button" DesignTimeRectangle="533, 841, 7, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.Response' role='outline item' /&gt;&lt;ctrl automationid='rrbtn' /&gt;&lt;ctrl name='1' role='text' /&gt;&quot;, Int_Count)]" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.Response' role='outline item' /&gt;&lt;ctrl automationid='rrbtn' /&gt;&lt;ctrl name='1' role='text' automationid='' check:text='1' /&gt;" Guid="263b2d33-d6b7-48ea-bbe8-a2eeae153443" InformativeScreenshot="33ec8accbb65aa4cbcd21e12fcb03ff3.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                                                  </uix:NClick.Target>
+                                                                </uix:NClick>
+                                                                <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="1" DisplayName="Click Doc Viewer Pane" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                  <uix:NClick.Target>
+                                                                    <uix:TargetAnchorable DesignTimeRectangle="538, 195, 1162, 740" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl idx='2' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='SourceDoc' /&gt;&lt;ctrl automationid='rpSourceDoc' /&gt;&lt;ctrl automationid='' role='pane' /&gt;" Guid="858da052-7b1c-41d6-a343-a34aced0b9e7" InformativeScreenshot="ca91b40f9d678277e6a998226fa17788.png" ScopeSelectorArgument="&lt;wnd aaname='*' app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                                                                  </uix:NClick.Target>
+                                                                </uix:NClick>
+                                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Reset Actual Size" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5de4718a-dcc3-482b-8fdd-12845c573744" Version="V3">
+                                                                  <uix:NClick.Target>
+                                                                    <uix:TargetAnchorable CvTextArea="43, 131, 79, 15" CvTextArgument="Actual Size" CvType="Text" DesignTimeRectangle="5, 124, 197, 30" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='Actual Size' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Actual Size' role='menu item' automationid='' check:text='Actual Size' /&gt;" Guid="994d69e5-f7b1-43aa-a87f-317db20c730a" InformativeScreenshot="c42ad867a755e1aa1f3128d8e540800d.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                                                                  </uix:NClick.Target>
+                                                                </uix:NClick>
+                                                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'client  NoteUserControl'" sap:VirtualizedContainerService.HintSize="387.2,172" sap2010:WorkflowViewState.IdRef="GetOCRText_4">
+                                                                  <ui:GetOCRText.OCREngine>
+                                                                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                                                      <ActivityFunc.Argument>
+                                                                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                                                      </ActivityFunc.Argument>
+                                                                      <p:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="p7W0AfQyFCzfFK6qFBd6zihGBZrFURCJdGPBdEKdj0IqK7aIcpGJSbcHC705/qTUQuxCDFkdgCf3EJ1jgTZP0Q==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_4" Image="[Image]" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="100000" />
+                                                                    </ActivityFunc>
+                                                                  </ui:GetOCRText.OCREngine>
+                                                                  <ui:GetOCRText.Target>
+                                                                    <ui:Target Element="{x:Null}" Id="b30aee1a-dcbd-40c8-989b-47c9a1072101" InformativeScreenshot="c9b5a21d438d057d8fa78b4e48f74ea9" Selector="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='4' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl automationid='NoteUserControl' /&gt;">
+                                                                      <ui:Target.ClippingRegion>
+                                                                        <ui:Region Rectangle="528, 5, 213, 55" />
+                                                                      </ui:Target.ClippingRegion>
+                                                                      <ui:Target.TimeoutMS>
+                                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                                      </ui:Target.TimeoutMS>
+                                                                      <ui:Target.WaitForReady>
+                                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                      </ui:Target.WaitForReady>
+                                                                    </ui:Target>
+                                                                  </ui:GetOCRText.Target>
+                                                                  <ui:GetOCRText.Text>
+                                                                    <OutArgument x:TypeArguments="x:String">[OCR_Output]</OutArgument>
+                                                                  </ui:GetOCRText.Text>
+                                                                </ui:GetOCRText>
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_83" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;UnClear Note: Response is linked with Exxon Mobil Corporation (S)&quot;]" />
+                                                              </Sequence>
+                                                            </uix:NCheckState.IfExists>
+                                                            <uix:NCheckState.IfNotExists>
+                                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_114">
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_81" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;UnClear Note:Response Not Added for &quot;+str_GetText]" />
+                                                              </Sequence>
+                                                            </uix:NCheckState.IfNotExists>
+                                                            <uix:NCheckState.Target>
+                                                              <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[string.Format(&quot;&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl idx='{0}*' name='SPbinderLibrary.Note' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.Response' role='outline item' /&gt;&lt;ctrl role='client' /&gt;&quot;, Int_Count)]" Guid="86b862a8-d59b-4954-8fdf-251a05ce2a3f" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                                                            </uix:NCheckState.Target>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </uix:NCheckState>
+                                                        </Sequence>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Int32">[Int_Count]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Int32">[Int_Count-1]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                </Sequence>
+                                              </ui:InterruptibleWhile.Body>
+                                              <ui:InterruptibleWhile.Condition>
+                                                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Int_Count &lt;&gt;0" />
+                                              </ui:InterruptibleWhile.Condition>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:InterruptibleWhile>
+                                          </Sequence>
+                                        </uix:NCheckState.IfExists>
+                                        <uix:NCheckState.IfNotExists>
+                                          <Sequence DisplayName="Target does not appear - If Notes not available" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_67" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;The RollForworded notes are not available in Binder&quot;]" />
+                                          </Sequence>
+                                        </uix:NCheckState.IfNotExists>
+                                        <uix:NCheckState.Target>
+                                          <uix:TargetAnchorable CVScreenId="93c10dee-4cdc-480d-8191-ca404dfa750d" CvTextArea="881, 568, 108, 15" CvTextArgument="Created On Asc" CvType="Text" DesignTimeRectangle="139, 562, 158, 34" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'Created On Asc'" FullSelectorArgument="&lt;ctrl name='Add Response' role='menu item' aastate='focusable' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='NotesTabItem' /&gt;&lt;ctrl automationid='cmbSortBy' role='combo box' /&gt;" Guid="7ffe8977-334c-4ed7-a7b9-bfc1d0befee5" ImageBase64="" InformativeScreenshot="2e007fea5ded732e91ef5a0314bcf854.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*Notes*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                        </uix:NCheckState.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NCheckState>
+                                    </Sequence>
+                                  </uix:NCheckState.IfExists>
+                                  <uix:NCheckState.IfNotExists>
+                                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_65" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;RollForwarded Exxon Mobil Corporation (S)  | Pg. is not Available in Prior Year Workpapers&quot;]" />
+                                    </Sequence>
+                                  </uix:NCheckState.IfNotExists>
+                                  <uix:NCheckState.Target>
+                                    <uix:TargetAnchorable CVScreenId="f48e3bfd-aa72-4e76-92fa-2e9cd8d80cd2" CvTextArea="168, 297, 197, 17" CvTextArgument="Exxon Mobil Corporation (S)" CvType="Text" DesignTimeRectangle="169, 295, 267, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Exxon Mobil'" FullSelectorArgument="&lt;ctrl automationid='NodeDisplay' helpText='Exxon Mobil Corporation (S)  | Pg.*' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl automationid='NodeDisplay' role='text' check:text='Exxon Mobil Corporation (S)  | Pg. 7 (5)' /&gt;" Guid="f8701ebf-6b30-4b29-a5a1-2e5f9ae8911d" ImageBase64="" InformativeScreenshot="bf4adfc89dd0add7ecb2d676196a9f0c.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CVScreenId="f48e3bfd-aa72-4e76-92fa-2e9cd8d80cd2" CvTextArea="142, 268, 186, 16" CvTextArgument="1099 DIV Dividend Income" CvType="Text" DesignTimeRectangle="144, 265, 188, 19" ElementType="Text" FriendlyName="'1099 DIV Dividend Income'" FullSelectorArgument="&lt;ctrl automationid='NodeDisplay' helpText='Prior Year Workpapers ' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl automationid='NodeDisplay' role='text' check:text='1099 DIV Dividend Income' /&gt;" SearchSteps="Selector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NCheckState.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NCheckState>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,389.6" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_64" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Prior Year Workpapeprs Folder is not available in CY Binder&quot;]" />
+                                <Throw DisplayName="Throw BRE Binder ID not present" Exception="[new BusinessRuleException(&quot;Prior Year Workpapeprs Folder is not available in CY Binder&quot;)]" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable CVScreenId="fd92d4e0-65d3-4462-ae95-543c8a1aad40" CvTextArea="117, 237, 160, 17" CvTextArgument="Prior Year Workpapers" CvType="Text" DesignTimeRectangle="119, 235, 161, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='NodeDisplay' helpText='Prior Year Workpapers ' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgTree' /&gt;&lt;ctrl automationid='rpTree' /&gt;&lt;ctrl name='INDEX TREE' role='page tab' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl name='SPbinderLibrary.IndexTreeClass' role='outline item' /&gt;&lt;ctrl automationid='NodeDisplay' role='text' check:text='Prior Year Workpapers' /&gt;" Guid="81c867ca-b460-49c8-9165-20e054f990d6" InformativeScreenshot="ef3d2c0f5ddc647861fa84521c15203e.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            </uix:NCheckState.Target>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NCheckState>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="1920, 0, 1920, 1040" FilePath="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" IconBase64="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" InformativeScreenshot="23c20b711d82724fb87b88913cc5dbdc.png" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" Title="SPbinder - Anderson, Jack (8838US-0421) | 1040 | 2022 | Binder I*" />
+                    </uix:NApplicationCard.TargetApp>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NApplicationCard>
+                </Sequence>
+              </ActivityAction>
+            </ui:RetryScope.ActivityBody>
+            <ui:RetryScope.Condition>
+              <ActivityFunc x:TypeArguments="x:Boolean" />
+            </ui:RetryScope.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:RetryScope>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="2470.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="SE : Notes" sap:VirtualizedContainerService.HintSize="449.6,319.2" sap2010:WorkflowViewState.IdRef="Sequence_51">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_44" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Failed in Notes&quot;]" />
+              <Rethrow sap:VirtualizedContainerService.HintSize="387.2,24.8" sap2010:WorkflowViewState.IdRef="Rethrow_1" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="ui:BusinessRuleException" sap:VirtualizedContainerService.HintSize="2470.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="ui:BusinessRuleException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="BE : Notes" sap:VirtualizedContainerService.HintSize="449.6,319.2" sap2010:WorkflowViewState.IdRef="Sequence_52">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_45" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Failed in Notes&quot;]" />
+              <Rethrow sap:VirtualizedContainerService.HintSize="387.2,24.8" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>
